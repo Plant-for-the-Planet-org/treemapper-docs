@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const SERVER_API_URL = process.env.SERVER_API_URL || 'http://localhost:3001';
+const SERVER_API_URL = process.env.SERVER_API_URL;
 
 export async function POST(request: NextRequest) {
   try {
