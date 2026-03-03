@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -27,11 +26,11 @@ export default async function WorkingOfflinePage({
         {t('intro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('offlineModeImageTitle')}
         description={t('offlineModeImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('offlineMapsTitle')}</h2>
       <p>
@@ -49,11 +48,11 @@ export default async function WorkingOfflinePage({
         {t('downloadMapsDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('offlineMapsDownloadImageTitle')}
         description={t('offlineMapsDownloadImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 my-6">
         <h4 className="mt-0 text-blue-600 dark:text-blue-500">{tUi('alerts.tip')}</h4>
@@ -72,11 +71,11 @@ export default async function WorkingOfflinePage({
         {t('refreshSpeciesDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('speciesDatabaseImageTitle')}
         description={t('speciesDatabaseImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6 my-6">
         <h4 className="mt-0 text-green-600 dark:text-green-500">{tUi('alerts.important')}</h4>
@@ -98,11 +97,11 @@ export default async function WorkingOfflinePage({
         <li>{t('allPhotosItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('offlinePhotoCaptureImageTitle')}
         description={t('offlinePhotoCaptureImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('exportDataTitle')}</h2>
       <p>
@@ -117,11 +116,11 @@ export default async function WorkingOfflinePage({
         <li>{t('exportFunctionalityItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('dataExportImageTitle')}
         description={t('dataExportImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('monitoringPlotTitle')}</h2>
       <p>
@@ -141,11 +140,11 @@ export default async function WorkingOfflinePage({
         {t('monitoringPlotDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('offlineMonitoringPlotImageTitle')}
         description={t('offlineMonitoringPlotImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('whenInternetRequiredTitle')}</h2>
       <p>

@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -26,11 +25,11 @@ export default async function ManagingSpeciesPage({
         {t('intro2')} <strong>{t('speciesCount')}</strong> {t('intro2Mid')} <strong>{t('offline')}</strong> {t('intro2End')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('speciesListImageTitle')}
         description={t('speciesListImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('whereManageTitle')}</h2>
       <ul>
@@ -63,11 +62,11 @@ export default async function ManagingSpeciesPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('editSpeciesImageTitle')}
         description={t('editSpeciesImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('webDashboardTitle')}</h2>
       <p>

@@ -22,7 +22,7 @@ export default async function PlanetPlatformRegistrationPage({
       <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 my-6">
         <p className="mb-2">
           {t('registrationLinkText')}{' '}
-          <Link href={t('registrationLinkUrl')} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+          <Link href={"https://pp.eco/"} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
             {t('registrationLink')}
           </Link>.
         </p>

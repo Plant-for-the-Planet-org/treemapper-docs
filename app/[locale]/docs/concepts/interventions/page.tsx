@@ -27,10 +27,10 @@ export default async function InterventionsPage({
         {t('whatIsIntro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('exampleImageTitle')}
         description={t('exampleImageDesc')}
-      />
+      /> */}
 
       <h2>{t('typesTitle')}</h2>
       <p>{t('typesIntro')}</p>
@@ -166,11 +166,11 @@ export default async function InterventionsPage({
       <p>
         {t('polygonDesc')}
       </p>
-
+{/* 
       <PlaceholderImage
         title={t('pointVsPolygonImageTitle')}
         description={t('pointVsPolygonImageDesc')}
-      />
+      /> */}
 
       <h2>{t('statusTitle')}</h2>
 

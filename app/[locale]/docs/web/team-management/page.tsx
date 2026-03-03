@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -28,10 +27,10 @@ export default async function TeamManagementPage({
         {t('teamMemberListDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('teamListImageTitle')}
         description={t('teamListImageDesc')}
-      />
+      /> */}
 
       <h3>{t('memberInformationTitle')}</h3>
       <p>{t('memberInformationIntro')}</p>
@@ -117,10 +116,10 @@ export default async function TeamManagementPage({
         <li>{t('observerItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('rolePermissionsImageTitle')}
         description={t('rolePermissionsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('invitingTeamMembersTitle')}</h2>
 
@@ -145,10 +144,10 @@ export default async function TeamManagementPage({
         <li>{t('bulkInvitationItem4')}</li>
       </ol>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('invitationModalImageTitle')}
         description={t('invitationModalImageDesc')}
-      />
+      /> */}
 
       <h2>{t('managingInvitationsTitle')}</h2>
       <p>{t('managingInvitationsDesc')}</p>

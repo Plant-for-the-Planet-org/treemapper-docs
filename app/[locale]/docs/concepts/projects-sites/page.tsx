@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -27,10 +26,10 @@ export default async function ProjectsSitesPage({
         {t('whatIsProjectIntro3')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('projectOverviewImageTitle')}
         description={t('projectOverviewImageDesc')}
-      />
+      /> */}
 
       <h3>{t('projectDetailsTitle')}</h3>
       <p>{t('projectDetailsIntro')}</p>
@@ -63,10 +62,10 @@ export default async function ProjectsSitesPage({
         {t('whatIsSiteIntro3')} <strong>{t('manySites')}</strong>. {t('whatIsSiteIntro4')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('sitesOnMapImageTitle')}
         description={t('sitesOnMapImageDesc')}
-      />
+      /> */}
 
       <h3>{t('siteDetailsTitle')}</h3>
       <p>{t('siteDetailsIntro')}</p>
@@ -96,10 +95,10 @@ export default async function ProjectsSitesPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('siteBoundaryMethodsImageTitle')}
         description={t('siteBoundaryMethodsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('accessPermissionsTitle')}</h2>
       <p>
@@ -133,10 +132,10 @@ export default async function ProjectsSitesPage({
         <li>{t('siteLevelAccessItem3')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('projectSiteAccessImageTitle')}
         description={t('projectSiteAccessImageDesc')}
-      />
+      /> */}
 
       <h2>{t('howWorkTogetherTitle')}</h2>
       <p>{t('howWorkTogetherIntro')}</p>

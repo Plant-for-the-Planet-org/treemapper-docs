@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -40,10 +39,10 @@ export default async function PhotoDocumentationPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('cameraInterfaceImageTitle')}
         description={t('cameraInterfaceImageDesc')}
-      />
+      /> */}
 
       <h2>{t('takingPhotosTitle')}</h2>
       <p>{t('takingPhotosIntro')}</p>
@@ -118,10 +117,10 @@ export default async function PhotoDocumentationPage({
         {t('interventionPhotosDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('photoTypesImageTitle')}
         description={t('photoTypesImageDesc')}
-      />
+      /> */}
 
       <h2>{t('imageStorageTitle')}</h2>
       <p>{t('imageStorageIntro')}</p>
@@ -231,10 +230,10 @@ export default async function PhotoDocumentationPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('photoBestPracticesImageTitle')}
         description={t('photoBestPracticesImageDesc')}
-      />
+      /> */}
 
       <h2>{t('troubleshootingTitle')}</h2>
 

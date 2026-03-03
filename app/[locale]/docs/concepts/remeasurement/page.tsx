@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -54,10 +53,10 @@ export default async function RemeasurementPage({
         />
       </div>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('remeasurementFlowImageTitle')}
         description={t('remeasurementFlowImageDesc')}
-      />
+      /> */}
 
       <h2>{t('recordingDeadTreesTitle')}</h2>
       <p>
@@ -89,10 +88,10 @@ export default async function RemeasurementPage({
         <li>{t('measurementHistoryItem5')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('treeTimelineImageTitle')}
         description={t('treeTimelineImageDesc')}
-      />
+      /> */}
 
       <h2>{t('remeasurementRemindersTitle')}</h2>
       <p>
@@ -117,10 +116,10 @@ export default async function RemeasurementPage({
         {t('locationFeatureIntro1')} <strong>{t('locationFeature')}</strong> {t('locationFeatureIntro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('treesDueImageTitle')}
         description={t('treesDueImageDesc')}
-      />
+      /> */}
 
       <h2>{t('bestPracticesTitle')}</h2>
       <ul>

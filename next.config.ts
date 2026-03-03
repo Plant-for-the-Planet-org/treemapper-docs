@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/docs' : '',
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'placeholder.com' },

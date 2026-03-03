@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -38,10 +37,10 @@ export default async function SitesManagementPage({
         {t('listViewDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('sitesListImageTitle')}
         description={t('sitesListImageDesc')}
-      />
+      /> */}
 
       <h2>{t('siteInformationTitle')}</h2>
       <p>{t('siteInformationIntro')}</p>
@@ -118,10 +117,10 @@ export default async function SitesManagementPage({
         {t('uploadGeoJsonDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('siteCreationImageTitle')}
         description={t('siteCreationImageDesc')}
-      />
+      /> */}
 
       <h3>{t('areaCalculationTitle')}</h3>
       <p>
@@ -167,10 +166,10 @@ export default async function SitesManagementPage({
         {t('accessLevelsDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('siteAccessImageTitle')}
         description={t('siteAccessImageDesc')}
-      />
+      /> */}
 
       <h2>{t('deletingSitesTitle')}</h2>
       <p>

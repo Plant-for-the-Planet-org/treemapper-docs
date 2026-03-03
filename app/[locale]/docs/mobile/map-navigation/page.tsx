@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -23,10 +22,10 @@ export default async function MapNavigationPage({
         {t('overviewDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('mapInterfaceImageTitle')}
         description={t('mapInterfaceImageDesc')}
-      />
+      /> */}
 
       <h2>{t('mapViewsTitle')}</h2>
       <p>{t('mapViewsIntro')}</p>
@@ -78,10 +77,10 @@ export default async function MapNavigationPage({
         {t('sampleTreesDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('sampleTreesImageTitle')}
         description={t('sampleTreesImageDesc')}
-      />
+      /> */}
 
       <h2>{t('interactingTitle')}</h2>
 
@@ -139,10 +138,10 @@ export default async function MapNavigationPage({
         {t('remeasurementFilterDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('mapFiltersImageTitle')}
         description={t('mapFiltersImageDesc')}
-      />
+      /> */}
 
       <h2>{t('gpsAccuracyTitle')}</h2>
       <p>

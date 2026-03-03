@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -23,10 +22,10 @@ export default async function DashboardOverviewPage({
         {t('overviewDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('dashboardHomeImageTitle')}
         description={t('dashboardHomeImageDesc')}
-      />
+      /> */}
 
       <h2>{t('dashboardStatisticsTitle')}</h2>
       <p>
@@ -64,10 +63,10 @@ export default async function DashboardOverviewPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('statisticsCardsImageTitle')}
         description={t('statisticsCardsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('dateRangeFilteringTitle')}</h2>
       <p>
@@ -105,10 +104,10 @@ export default async function DashboardOverviewPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('forestProgressImageTitle')}
         description={t('forestProgressImageDesc')}
-      />
+      /> */}
 
       <h2>{t('treePlantingChartTitle')}</h2>
       <p>
@@ -155,10 +154,10 @@ export default async function DashboardOverviewPage({
         {t('mapTabDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('dashboardTabsImageTitle')}
         description={t('dashboardTabsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('roleBasedAccessTitle')}</h2>
       <p>

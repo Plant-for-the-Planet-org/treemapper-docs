@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -28,10 +27,10 @@ export default async function ReportsPage({
         {t('forestChampionsLeaderboardDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('leaderboardImageTitle')}
         description={t('leaderboardImageDesc')}
-      />
+      /> */}
 
       <h3>{t('rankingMetricsTitle')}</h3>
       <p>{t('rankingMetricsDesc')}</p>
@@ -104,10 +103,10 @@ export default async function ReportsPage({
         <li>{t('mapControlsItem3')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('geographicMapImageTitle')}
         description={t('geographicMapImageDesc')}
-      />
+      /> */}
 
       <h2>{t('dashboardAnalyticsTitle')}</h2>
       <p>
@@ -162,10 +161,10 @@ export default async function ReportsPage({
         <li>{t('whatsIncludedItem5')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('exportOptionsImageTitle')}
         description={t('exportOptionsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('reportGenerationTitle')}</h2>
       <p>

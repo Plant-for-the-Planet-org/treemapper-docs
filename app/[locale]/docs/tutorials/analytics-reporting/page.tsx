@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -23,11 +22,11 @@ export default async function AnalyticsReportingPage({
         {t('intro1')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('analyticsDashboardImageTitle')}
         description={t('analyticsDashboardImageDesc')}
         aspectRatio="landscape"
-      />
+      /> */}
 
       <h2>{t('overviewDashboardTitle')}</h2>
       <p>
@@ -42,11 +41,11 @@ export default async function AnalyticsReportingPage({
         <li><strong>{t('treesPlanted')}</strong>: {t('treesPlantedDesc')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('projectOverviewImageTitle')}
         description={t('projectOverviewImageDesc')}
         aspectRatio="landscape"
-      />
+      /> */}
 
       <h2>{t('barGraphTitle')}</h2>
       <p>
@@ -59,11 +58,11 @@ export default async function AnalyticsReportingPage({
         <li>{t('barGraphItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('treePlantationBarGraphImageTitle')}
         description={t('treePlantationBarGraphImageDesc')}
         aspectRatio="landscape"
-      />
+      /> */}
 
       <h2>{t('recentActivityTitle')}</h2>
       <p>
@@ -82,11 +81,11 @@ export default async function AnalyticsReportingPage({
         {t('recentActivityDesc2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('recentActivityFeedImageTitle')}
         description={t('recentActivityFeedImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('targetTrackerTitle')}</h2>
       <p>
@@ -106,11 +105,11 @@ export default async function AnalyticsReportingPage({
         </p>
       </div>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('targetTrackerImageTitle')}
         description={t('targetTrackerImageDesc')}
         aspectRatio="landscape"
-      />
+      /> */}
 
       <h2>{t('downloadReportsTitle')}</h2>
       <p>
@@ -135,11 +134,11 @@ export default async function AnalyticsReportingPage({
         <li>{t('toDownloadStep5')} <strong>{t('download')}</strong></li>
       </ol>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('reportDownloadImageTitle')}
         description={t('reportDownloadImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6 my-6">
         <h4 className="mt-0 text-green-600 dark:text-green-500">{tUi('alerts.reportUses')}</h4>

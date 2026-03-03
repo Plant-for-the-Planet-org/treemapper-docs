@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -23,11 +22,11 @@ export default async function TeamCollaborationPage({
         {t('intro1')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('teamManagementImageTitle')}
         description={t('teamManagementImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('roleManagementTitle')}</h2>
       <p>
@@ -48,11 +47,11 @@ export default async function TeamCollaborationPage({
         <li>{t('ownerItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('ownerRoleImageTitle')}
         description={t('ownerRoleImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('adminTitle')}</h3>
       <p>
@@ -65,11 +64,11 @@ export default async function TeamCollaborationPage({
         <li>{t('adminItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('adminRoleImageTitle')}
         description={t('adminRoleImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('contributorTitle')}</h3>
       <p>
@@ -83,11 +82,11 @@ export default async function TeamCollaborationPage({
         <li>{t('contributorItem5')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('contributorRoleImageTitle')}
         description={t('contributorRoleImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('observerTitle')}</h3>
       <p>
@@ -101,11 +100,11 @@ export default async function TeamCollaborationPage({
         <li>{t('observerItem5')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('observerRoleImageTitle')}
         description={t('observerRoleImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('managingTeamTitle')}</h2>
       <p>
@@ -136,11 +135,11 @@ export default async function TeamCollaborationPage({
         <li>{t('bulkInviteStep5')}</li>
       </ol>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('teamInvitationsImageTitle')}
         description={t('teamInvitationsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('managingInvitationsTitle')}</h3>
       <p>
@@ -156,11 +155,11 @@ export default async function TeamCollaborationPage({
         <li><strong>{t('removeTeamMembers')}</strong>: {t('removeTeamMembersDesc')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('managingTeamImageTitle')}
         description={t('managingTeamImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 my-6">
         <h4 className="mt-0 text-blue-600 dark:text-blue-500">{tUi('alerts.bestPractices')}</h4>

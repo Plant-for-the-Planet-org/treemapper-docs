@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -26,11 +25,11 @@ export default async function MonitoringPlotsPage({
         {t('intro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('overviewImageTitle')}
         description={t('overviewImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('whatIsTitle')}</h2>
       <p>
@@ -60,33 +59,33 @@ export default async function MonitoringPlotsPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotTypeImageTitle')}
         description={t('plotTypeImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('plotDetailsTitle')}</h3>
       <p>
         {t('plotDetailsDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotDetailsImageTitle')}
         description={t('plotDetailsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('locationTitle')}</h3>
       <p>
         {t('locationDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('locationImageTitle')}
         description={t('locationImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <p>
         {t('onceCompleted')}
@@ -110,11 +109,11 @@ export default async function MonitoringPlotsPage({
         {t('allowsPlotDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('addingPlantsImageTitle')}
         description={t('addingPlantsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('plantTimelineTitle')}</h2>
       <p>
@@ -132,11 +131,11 @@ export default async function MonitoringPlotsPage({
         {t('createsRecordDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plantTimelineImageTitle')}
         description={t('plantTimelineImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('plotObservationsTitle')}</h2>
       <p>
@@ -153,11 +152,11 @@ export default async function MonitoringPlotsPage({
         {t('observationsRecordedDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotObservationsImageTitle')}
         description={t('plotObservationsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('mapViewTitle')}</h2>
       <p>{t('mapViewIntro')}</p>
@@ -170,11 +169,11 @@ export default async function MonitoringPlotsPage({
         {t('mapViewDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('mapViewImageTitle')}
         description={t('mapViewImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('editingTitle')}</h2>
       <p>
@@ -204,11 +203,11 @@ export default async function MonitoringPlotsPage({
         {t('structureHelpsDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotGroupsImageTitle')}
         description={t('plotGroupsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('whatsNextTitle')}</h2>
       <p>{t('whatsNextIntro')}</p>

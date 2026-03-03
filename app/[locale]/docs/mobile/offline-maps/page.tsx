@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -41,10 +40,10 @@ export default async function OfflineMapsPage({
         {t('step1Desc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('areaSelectionImageTitle')}
         description={t('areaSelectionImageDesc')}
-      />
+      /> */}
 
       <h3>{t('step2Title')}</h3>
       <p>
@@ -66,10 +65,10 @@ export default async function OfflineMapsPage({
         <li>{t('step3Item3')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('downloadProgressImageTitle')}
         description={t('downloadProgressImageDesc')}
-      />
+      /> */}
 
       <h3>{t('step4Title')}</h3>
       <p>
@@ -124,10 +123,10 @@ export default async function OfflineMapsPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('offlineMapsListImageTitle')}
         description={t('offlineMapsListImageDesc')}
-      />
+      /> */}
 
       <h3>{t('deletingTitle')}</h3>
       <p>{t('deletingIntro')}</p>

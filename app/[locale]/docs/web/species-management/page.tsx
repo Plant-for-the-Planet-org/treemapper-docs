@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -50,10 +49,10 @@ export default async function SpeciesManagementPage({
         {t('unknownSpeciesNote')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('speciesGridImageTitle')}
         description={t('speciesGridImageDesc')}
-      />
+      /> */}
 
       <h2>{t('viewingSpeciesTitle')}</h2>
       <p>{t('viewingSpeciesIntro')}</p>
@@ -114,10 +113,10 @@ export default async function SpeciesManagementPage({
         <li>{t('sortingItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('speciesFiltersImageTitle')}
         description={t('speciesFiltersImageDesc')}
-      />
+      /> */}
 
       <h2>{t('speciesDetailsTitle')}</h2>
       <p>{t('speciesDetailsIntro')}</p>
@@ -177,10 +176,10 @@ export default async function SpeciesManagementPage({
         <li>{t('requestingNewSpeciesItem5')}</li>
       </ol>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('addSpeciesImageTitle')}
         description={t('addSpeciesImageDesc')}
-      />
+      /> */}
 
       <h2>{t('editingSpeciesTitle')}</h2>
       <p>{t('editingSpeciesIntro')}</p>
@@ -223,10 +222,10 @@ export default async function SpeciesManagementPage({
         <li>{t('bulkAssignmentItem4')}</li>
       </ol>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('speciesAssignmentImageTitle')}
         description={t('speciesAssignmentImageDesc')}
-      />
+      /> */}
 
       <h2>{t('speciesStatusTitle')}</h2>
 

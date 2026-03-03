@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -87,10 +86,10 @@ export default async function CreatingInterventionsPage({
         {t('step1Desc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('newInterventionFormImageTitle')}
         description={t('newInterventionFormImageDesc')}
-      />
+      /> */}
 
       <h3>{t('step2Title')}</h3>
       <p>
@@ -124,10 +123,10 @@ export default async function CreatingInterventionsPage({
         <li>{t('pointLocationItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('pointMarkerImageTitle')}
         description={t('pointMarkerImageDesc')}
-      />
+      /> */}
 
       <h3>{t('polygonLocationTitle')}</h3>
       <p>{t('polygonLocationIntro')}</p>
@@ -149,10 +148,10 @@ export default async function CreatingInterventionsPage({
         <li>{t('gpsPolygonTrackingItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('polygonTrackingImageTitle')}
         description={t('polygonTrackingImageDesc')}
-      />
+      /> */}
 
       <h2>{t('addingSpeciesTitle')}</h2>
       <p>

@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -55,10 +54,10 @@ export default async function PlotManagementPage({
         <li>{t('rectangularPlotsItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotShapesImageTitle')}
         description={t('plotShapesImageDesc')}
-      />
+      /> */}
 
       <h2>{t('plotComplexityTitle')}</h2>
       <p>{t('plotComplexityIntro')}</p>
@@ -104,10 +103,10 @@ export default async function PlotManagementPage({
         />
       </div>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotCreationImageTitle')}
         description={t('plotCreationImageDesc')}
-      />
+      /> */}
 
       <h3>{t('drawingBoundariesTitle')}</h3>
       <p>{t('drawingBoundariesIntro')}</p>
@@ -197,10 +196,10 @@ export default async function PlotManagementPage({
         <li>{t('plantTimelineItem5')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plantTimelineImageTitle')}
         description={t('plantTimelineImageDesc')}
-      />
+      /> */}
 
       <h2>{t('plotObservationsTitle')}</h2>
       <p>

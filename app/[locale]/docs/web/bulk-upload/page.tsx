@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -44,10 +43,10 @@ export default async function BulkUploadPage({
         {t('uploadWizardDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('uploadWizardImageTitle')}
         description={t('uploadWizardImageDesc')}
-      />
+      /> */}
 
       <h3>{t('step1Title')}</h3>
       <p>
@@ -82,10 +81,10 @@ export default async function BulkUploadPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('fileUploadImageTitle')}
         description={t('fileUploadImageDesc')}
-      />
+      /> */}
 
       <h3>{t('step3Title')}</h3>
       <p>

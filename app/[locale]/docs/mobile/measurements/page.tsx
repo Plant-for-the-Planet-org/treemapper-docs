@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -38,10 +37,10 @@ export default async function MeasurementsPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('heightMeasurementImageTitle')}
         description={t('heightMeasurementImageDesc')}
-      />
+      /> */}
 
       <h3>{t('diameterMeasurementsTitle')}</h3>
       <p>
@@ -68,10 +67,10 @@ export default async function MeasurementsPage({
         {t('appSwitchesDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('diameterMeasurementPointsImageTitle')}
         description={t('diameterMeasurementPointsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('takingMeasurementsTitle')}</h2>
       <p>{t('takingMeasurementsIntro')}</p>
@@ -139,10 +138,10 @@ export default async function MeasurementsPage({
         <li>{t('treeTagsItem4')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('treeTagInputImageTitle')}
         description={t('treeTagInputImageDesc')}
-      />
+      /> */}
 
       <h2>{t('locationDataTitle')}</h2>
       <p>

@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -22,11 +21,11 @@ export default async function SiteCreationPage({
         <strong>{t('sites')}</strong> {t('intro')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('sitesOverviewImageTitle')}
         description={t('sitesOverviewImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('creatingTitle')}</h2>
       <p>{t('creatingIntro')}</p>
@@ -51,22 +50,22 @@ export default async function SiteCreationPage({
         {t('drawPolygonDesc2')} <strong>{t('mobileApp')}</strong>. {t('drawPolygonDesc3')} <strong>{t('traceWithGPS')}</strong> {t('drawPolygonDesc4')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('drawPolygonImageTitle')}
         description={t('drawPolygonImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h3>{t('uploadGeoJSONTitle')}</h3>
       <p>
         {t('uploadGeoJSONDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('uploadGeoJSONImageTitle')}
         description={t('uploadGeoJSONImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('accessManagementTitle')}</h2>
       <p>

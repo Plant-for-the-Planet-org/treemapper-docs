@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -26,11 +25,11 @@ export default async function ProjectCreationPage({
         {t('intro3')} <strong>{t('signIn')}</strong> {t('intro4')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('createProjectImageTitle')}
         description={t('createProjectImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('requiredDetailsTitle')}</h2>
       <p>{t('requiredDetailsIntro')}</p>
@@ -46,11 +45,11 @@ export default async function ProjectCreationPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('projectDetailsImageTitle')}
         description={t('projectDetailsImageDesc')}
         aspectRatio="portrait"
-      />
+      /> */}
 
       <h2>{t('afterCreateTitle')}</h2>
       <p>

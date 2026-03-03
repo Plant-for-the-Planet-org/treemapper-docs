@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -27,10 +26,10 @@ export default async function PlotsPage({
         {t('whatAreIntro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('conceptImageTitle')}
         description={t('conceptImageDesc')}
-      />
+      /> */}
 
       <h2>{t('whyUseTitle')}</h2>
       <p>{t('whyUseIntro')}</p>
@@ -81,10 +80,10 @@ export default async function PlotsPage({
         {t('controlPlotsDesc')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('interventionVsControlImageTitle')}
         description={t('interventionVsControlImageDesc')}
-      />
+      /> */}
 
       <h2>{t('plotComponentsTitle')}</h2>
       <p>{t('plotComponentsIntro')}</p>
@@ -119,10 +118,10 @@ export default async function PlotsPage({
         <li>{t('additionalObservations')}</li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotComponentsImageTitle')}
         description={t('plotComponentsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('plantTimelineTitle')}</h2>
       <p>
@@ -171,10 +170,10 @@ export default async function PlotsPage({
         </li>
       </ul>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('plotGroupsImageTitle')}
         description={t('plotGroupsImageDesc')}
-      />
+      /> */}
 
       <h2>{t('benefitsTitle')}</h2>
       <p>{t('benefitsIntro')}</p>

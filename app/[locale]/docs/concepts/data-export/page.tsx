@@ -1,5 +1,4 @@
 import { DocPage } from '@/components/doc-page';
-import { PlaceholderImage } from '@/components/placeholder-image';
 import Link from 'next/link';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -28,10 +27,10 @@ export default async function DataExportPage({
         {t('exportingMobileIntro1')} <strong>{t('singleIntervention')}</strong> {t('exportingMobileIntro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('mobileExportImageTitle')}
         description={t('mobileExportImageDesc')}
-      />
+      /> */}
 
       <h3>{t('howToExportMobileTitle')}</h3>
       <ul>
@@ -46,10 +45,10 @@ export default async function DataExportPage({
         {t('exportingWebIntro1')} <strong>{t('allData')}</strong>, {t('exportingWebIntro2')}
       </p>
 
-      <PlaceholderImage
+      {/* <PlaceholderImage
         title={t('webDashboardExportImageTitle')}
         description={t('webDashboardExportImageDesc')}
-      />
+      /> */}
 
       <h3>{t('timeBasedFilteringTitle')}</h3>
       <p>
