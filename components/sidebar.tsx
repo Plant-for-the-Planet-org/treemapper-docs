@@ -5,12 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, ChevronRight } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { docsConfig, type DocItem } from '@/lib/docs';
 
 export function Sidebar({ isMobile = false, onItemClick }: { isMobile?: boolean; onItemClick?: () => void }) {
   const pathname = usePathname();
+  const locale = useLocale();
   const tSections = useTranslations('sidebar.sections');
   const tItems = useTranslations('sidebar.items');
   const [openSections, setOpenSections] = React.useState<string[]>(() => {
@@ -59,7 +60,7 @@ export function Sidebar({ isMobile = false, onItemClick }: { isMobile?: boolean;
             {openSections.includes(section.id) && (
               <div className="ml-2 space-y-0.5">
                 {section.items.map((item) => (
-                  <SidebarItem key={item.id} item={item} pathname={pathname} tItems={tItems} onItemClick={onItemClick} />
+                  <SidebarItem key={item.id} item={item} pathname={pathname} tItems={tItems} locale={locale} onItemClick={onItemClick} />
                 ))}
               </div>
             )}
@@ -100,7 +101,7 @@ export function Sidebar({ isMobile = false, onItemClick }: { isMobile?: boolean;
             {openSections.includes(section.id) && (
               <div className="ml-2 space-y-0.5">
                 {section.items.map((item) => (
-                  <SidebarItem key={item.id} item={item} pathname={pathname} tItems={tItems} onItemClick={onItemClick} />
+                  <SidebarItem key={item.id} item={item} pathname={pathname} tItems={tItems} locale={locale} onItemClick={onItemClick} />
                 ))}
               </div>
             )}
@@ -115,18 +116,21 @@ function SidebarItem({
   item,
   pathname,
   tItems,
+  locale,
   onItemClick,
 }: {
   item: DocItem;
   pathname: string;
   tItems: ReturnType<typeof useTranslations>;
+  locale: string;
   onItemClick?: () => void;
 }) {
-  const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+  const localizedHref = `/${locale}${item.href}`;
+  const isActive = pathname === localizedHref || pathname.startsWith(`${localizedHref}/`);
 
   return (
     <Link
-      href={item.href}
+      href={localizedHref}
       onClick={onItemClick}
       className={cn(
         'block rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-accent',
