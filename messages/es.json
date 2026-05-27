@@ -80,6 +80,7 @@
       "mobileFeatures": "Funciones Móviles",
       "webDashboard": "Panel Web",
       "planetPlatform": "Plataforma Planet",
+      "developers": "Desarrolladores",
       "helpSupport": "Ayuda y Soporte"
     },
     "items": {
@@ -117,7 +118,8 @@
       "planetPlatformRegistration": "Proceso de Registro",
       "planetPlatformDocuments": "Documentos y Contacto",
       "faq": "Preguntas Frecuentes",
-      "contactSupport": "Contactar Soporte"
+      "contactSupport": "Contactar Soporte",
+      "apiIntegration": "Exportación de Datos y API"
     }
   },
   "pages": {

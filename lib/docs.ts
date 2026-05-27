@@ -255,6 +255,19 @@ export const docsConfig: DocSection[] = [
     ],
   },
   {
+    id: 'developers',
+    title: 'Developers',
+    titleKey: 'developers',
+    items: [
+      {
+        id: 'api-integration',
+        title: 'Data Export & API',
+        titleKey: 'apiIntegration',
+        href: '/docs/developers/api-integration',
+      },
+    ],
+  },
+  {
     id: 'troubleshooting',
     title: 'Help & Support',
     titleKey: 'helpSupport',
