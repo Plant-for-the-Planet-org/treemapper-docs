@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '@/components/theme-provider';
 import { locales } from '@/i18n';
@@ -31,6 +32,8 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
+
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
@@ -40,7 +43,7 @@ export default async function LocaleLayout({
       enableSystem
       disableTransitionOnChange
     >
-      <NextIntlClientProvider messages={messages}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
       </NextIntlClientProvider>
     </ThemeProvider>

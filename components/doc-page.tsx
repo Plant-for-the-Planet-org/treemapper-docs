@@ -1,4 +1,4 @@
-import { Feedback } from '@/components/feedback';
+import { FeedbackWrapper } from '@/components/feedback-wrapper';
 
 interface DocPageProps {
   title: string;
@@ -19,7 +19,7 @@ export function DocPage({ title, description, children, pageId }: DocPageProps) 
       <div className="prose prose-slate dark:prose-invert max-w-none">
         {children}
       </div>
-      <Feedback pageId={pageId} />
+      <FeedbackWrapper pageId={pageId} />
     </article>
   );
 }
