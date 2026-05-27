@@ -1,2 +1,5 @@
 / /en 301
+/en/* /en/:splat 200
+/de/* /de/:splat 200
+/es/* /es/:splat 200
 /* /en/:splat 301
