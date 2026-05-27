@@ -2,6 +2,7 @@
 /en /en 200
 /de /de 200
 /es /es 200
+/_next/* /_next/:splat 200
 /en/* /en/:splat 200
 /de/* /de/:splat 200
 /es/* /es/:splat 200
