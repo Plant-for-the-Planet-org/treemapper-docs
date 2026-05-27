@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select } from '@/components/ui/select';
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Upload, X, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Upload, X } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -28,9 +28,6 @@ export default function ContactSupportPage() {
     message: '',
     files: [],
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (
@@ -43,26 +40,16 @@ export default function ContactSupportPage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     const maxFiles = 5;
-    const maxSize = 10 * 1024 * 1024; // 10MB per file
+    const maxSize = 10 * 1024 * 1024;
 
-    if (files.length + formData.files.length > maxFiles) {
-      setErrorMessage(t('maxFilesError', { max: maxFiles }));
-      return;
-    }
+    if (files.length + formData.files.length > maxFiles) return;
 
-    const validFiles = files.filter((file) => {
-      if (file.size > maxSize) {
-        setErrorMessage(t('fileSizeError', { maxSize: '10MB' }));
-        return false;
-      }
-      return true;
-    });
+    const validFiles = files.filter((file) => file.size <= maxSize);
 
     setFormData((prev) => ({
       ...prev,
       files: [...prev.files, ...validFiles],
     }));
-    setErrorMessage('');
   };
 
   const removeFile = (index: number) => {
@@ -74,49 +61,7 @@ export default function ContactSupportPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setErrorMessage('');
-
-    try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('subject', formData.subject);
-      formDataToSend.append('category', formData.category);
-      formDataToSend.append('message', formData.message);
-
-      formData.files.forEach((file, index) => {
-        formDataToSend.append(`file_${index}`, file);
-      });
-
-      const response = await fetch('/api/contact-support', {
-        method: 'POST',
-        body: formDataToSend,
-      });
-
-      if (!response.ok) {
-        throw new Error(t('submitError'));
-      }
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        category: '',
-        message: '',
-        files: [],
-      });
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : t('submitError'));
-    } finally {
-      setIsSubmitting(false);
-    }
+    // TODO: wire up form submission
   };
 
   return (
@@ -131,38 +76,6 @@ export default function ContactSupportPage() {
           <p className="text-sm text-muted-foreground">{t('responseTime')}</p>
         </div>
       </div>
-
-      {submitStatus === 'success' && (
-        <div className="mb-6 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-          <div className="flex items-start gap-3">
-            <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-            <div>
-              <h3 className="font-semibold text-green-900 dark:text-green-100 mb-1">
-                {t('successTitle')}
-              </h3>
-              <p className="text-sm text-green-800 dark:text-green-200">
-                {t('successMessage')}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="mb-6 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-          <div className="flex items-start gap-3">
-            <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-            <div>
-              <h3 className="font-semibold text-red-900 dark:text-red-100 mb-1">
-                {t('errorTitle')}
-              </h3>
-              <p className="text-sm text-red-800 dark:text-red-200">
-                {errorMessage || t('errorMessage')}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -310,26 +223,12 @@ export default function ContactSupportPage() {
           )}
         </div> */}
 
-        {errorMessage && (
-          <div className="p-3 rounded-md bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-            <p className="text-sm text-red-800 dark:text-red-200">{errorMessage}</p>
-          </div>
-        )}
-
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
           <Button
             type="submit"
-            disabled={isSubmitting}
             className="flex-1 sm:flex-none sm:min-w-[200px]"
           >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                {t('submitting')}
-              </>
-            ) : (
-              t('submitButton')
-            )}
+            {t('submitButton')}
           </Button>
           <Button
             type="button"
@@ -346,10 +245,7 @@ export default function ContactSupportPage() {
               if (fileInputRef.current) {
                 fileInputRef.current.value = '';
               }
-              setSubmitStatus('idle');
-              setErrorMessage('');
             }}
-            disabled={isSubmitting}
           >
             {t('resetButton')}
           </Button>
