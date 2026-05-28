@@ -130,7 +130,7 @@ html {
 }
 
 .prose pre {
-  @apply bg-secondary p-4 rounded-lg overflow-x-auto my-4;
+  @apply bg-secondary p-4 rounded-lg overflow-x-auto my-4 max-w-full;
 }
 
 .prose a {
